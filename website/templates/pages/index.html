@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    {% if index_movie %}
+        <div class="container">
+            <div class="row-3">,
+                  <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">
+                              {{ movie.name }}
+                          </h5>
+
+                          <p class="card-text">
+                              {{ movie.description }}
+                          </p>
+
+                          <a href="#" class="card-link">Card link</a>
+
+                          <a href="#" class="card-link">Another link</a>
+
+                        </div>
+
+                      </div>
+
+            </div>
+
+      </div>
+    {% else %}
+        <div class="alert alert-warning">
+            <p>
+                No data
+            </p>
+        </div>
+    {% endif %}
+
+{% endblock %}

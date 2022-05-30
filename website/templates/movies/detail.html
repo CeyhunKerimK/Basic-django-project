@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+      <div class="row mx-auto">
+            <div class="col-md-3 mx-auto">
+                  <div class="card mb-3" style="background-color: #0a53be">
+                            {% if movie %}
+                            <div class="card mb-3 mx-auto" style="width: 800px;height: 1000px;right: 300px">
+                              <img class="card-img-top" src="{% static movie.get_image_path %}" alt="img-fluid">
+                              <div class="card-body">
+                                  <h5 class="card-title"> {{ movie.name }} </h5>
+                                  <p class="card-text"> {{ movie.description }} </p>
+                                  <p class="card-text"><small class="text-muted"> {{ movie.created_time }} </small></p>
+                                  <p class="card-text">
+                                      {{ movie.Screening_date }}
+                                  </p>
+                                  <p class="card-text">
+                                      {{ movie.movie_type }}
+                                  </p>
+                                  <p class="card-text">
+                                      {{ movie.budget }}
+                                  </p>
+                                  <p class="card-text">
+                                      {{ movie.revenues }}
+                                  </p>
+                                  <p class="card-text">
+                                      {{ movie.director }}
+                                  </p>
+                              </div>
+                                {% else %}
+                                        <div class="alert alert-warning" style="margin-top: 400px">
+                                            <p>
+                                                No Data
+                                            </p>
+                                        </div>
+                                {% endif %}
+                               </div>
+                          </div>
+                    </div>
+              </div>
+        {% endblock %}
