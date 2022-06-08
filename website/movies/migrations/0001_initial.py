@@ -25,6 +25,7 @@ class Migration(migrations.Migration):
                 ('revenues', models.CharField(max_length=20, verbose_name='Filmin Hasılatı')),
                 ('duration', models.CharField(max_length=20, verbose_name='Filmin Süresi')),
                 ('movie_type', models.CharField(max_length=20, verbose_name='Filmin Türü')),
+                ('movie_Imdb_rating', models.CharField(max_length=20, verbose_name='Imdb puanı')),
                 ('IsPublished', models.BooleanField(default=True)),
             ],
         ),

@@ -1,101 +1,22 @@
 {% load static %}
-
 <html>
-
 <head>
-
-    <style>
-
-        nav{
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between ;
-
-            padding-top: 40px;
-
-            padding-left: 20% ;
-
-            padding-right: 10%;
-
-        }
-
-        .logo{
-
-            color: white;
-
-            font-size: 20px;
-
-        }
-
-        span{
-
-            color: red;
-
-        }
-
-        nav ul li{
-
-            list-style-type: none;
-
-            display: inline-block;
-
-            font-weight: bold;
-
-            padding: 10px 20px;
-
-        }
-
-        nav ul li a {
-
-            color: white;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-        }
-
-        nav ul li a:hover{
-
-            color: red;
-
-            transition: .3s;
-
-        }
-
-    </style>
-
 </head>
-
 <body>
-
     <div class="hero">
-
         <nav>
-
             <h2 class="logo">Ceyhun<span> Kerim</span></h2>
-
             <ul>
-
                 <li><a href="{% url 'index' %}">HOME</a></li>
-
                 <li><a href="{% url 'about' %}">ABOUT</a></li>
-
+                <ul><a href="{% url 'about' %}">KATEGORİLER</a>
+                    <li>Romantik/Komedi</li>
+                </ul>
                 <li><a href="{% url 'movies' %}">MOVİES</a></li>
-
                 <li><a href="{% url 'login' %}">LOGİN</a></li>
-
                 <li><a href="{% url 'register' %}">REGİSTER</a></li>
-
             </ul>
-
         </nav>
-
     </div>
-
 </body>
-
 </html>

@@ -7,6 +7,7 @@ class Movie(models.Model):
     duration = models.CharField(max_length=50,verbose_name='Filmin süresi')
     description = models.TextField(max_length=350,verbose_name='Film açıklaması')
     image = models.CharField(max_length=100,verbose_name='Film kapağı')
+    movie_Imdb_rating = models.CharField(max_length=20,verbose_name='Imdb puanı')
     created_date = models.DateField(verbose_name='oluşturulma tarihi')
     Screening_date = models.CharField(max_length=20,verbose_name='Filmin Gösterime Giriş Tarihi')
     director = models.CharField(max_length=30,verbose_name='yönetmen')
